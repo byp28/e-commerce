@@ -12,7 +12,15 @@ export const products = createSlice({
         addProducts : (state, action) =>{
             state.items = action.payload
         }
-    }
+    },
+    extraReducers : {
+        ["cart/createCartItem"]: (state, action) =>{
+            state.items.find(el => el.id === action.payload.id).picked = true
+        },
+        ["cart/deleteFromCart"]: (state, action) =>{
+            state.items.find(el => el.id === action.payload).picked = false
+        },
+    } 
 })
 
 export function getProductsList(action){

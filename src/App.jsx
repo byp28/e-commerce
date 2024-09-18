@@ -1,5 +1,6 @@
+import FloatingCartButton from "./components/FloatingCartButton";
 import ProductsList from "./components/ProductsList";
-//import FloatingCartButton from "./components/FloatingCartButton";
+
 function App() {
   return (
     <>
@@ -8,7 +9,7 @@ function App() {
           <ProductsList/>
         </div>
       </div>
-
+      <FloatingCartButton/>
     </>
   );
 }
